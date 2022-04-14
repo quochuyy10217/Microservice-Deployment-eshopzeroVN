@@ -9,13 +9,13 @@ const ProfileMenu = () => {
       <Menu.Item key="1">
         <Link to="/order">
           <UnorderedListOutlined />
-          Siparişlerim
+          Đơn hàng
         </Link>
       </Menu.Item>
       <Menu.Item key="2">
         <Link to="/logout">
           <LogoutOutlined />
-          Oturumu Kapat
+          Đăng xuất
         </Link>
       </Menu.Item>
     </Menu>

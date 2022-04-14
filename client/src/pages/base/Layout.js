@@ -71,7 +71,7 @@ function BaseLayout({ children }) {
         <ContentWrapper>{children}</ContentWrapper>
       </Content>
       <Footer style={{ textAlign: "center" }}>
-        eShopZero @2021 Created by Oğuzhan Aydın
+        eShopZero @2021 Created by Oğuzhan Aydın, Vietsub by 195205899, 19521044, 19521190 UIT
       </Footer>
     </Layout>
   );

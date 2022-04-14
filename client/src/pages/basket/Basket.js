@@ -22,7 +22,7 @@ const Basket = ({ history }) => {
     connection.on("ProductStockChanged", (result) => {
       setReady(true);
       setShowResult(true);
-      message.success(`Sipariş başarıyla oluşturuldu.`);
+      message.success(`Thanh toán đơn hàng thành công!`);
       updateBasket([]);
       resetCount();
 
@@ -48,13 +48,13 @@ const Basket = ({ history }) => {
       status={error != null ? "error" : "success"}
       title={
         error != null
-          ? "Error was occurred"
-          : "Successfully Purchased Cloud Server ECS!"
+          ? "Có lỗi xảy ra"
+          : "Thanh toán thành công!"
       }
       subTitle={
         error != null
           ? error
-          : "Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
+          : "Order number: 2017182818828182881. Có thể mất từ 1 đến 5 phút để xử lý đơn hàng của bạn!"
       }
       extra={[
         <Button type="primary" key="console" onClick={() => history.push("/")}>
@@ -88,7 +88,7 @@ const Basket = ({ history }) => {
 
           {count > 0 && (
             <Button type="primary" onClick={createOrder}>
-              Sepeti Onayla
+              Thanh toán
             </Button>
           )}
         </div>

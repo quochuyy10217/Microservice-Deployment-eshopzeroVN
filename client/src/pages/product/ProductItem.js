@@ -12,7 +12,7 @@ const ProductItem = ({ product }) => {
 
   const increment = () => {
     if (quantity >= product.availableStock) {
-      message.info("Stok bulunmamaktadır.");
+      message.info("Số lượng sản phẩm không hợp lệ");
       return;
     }
     setQuantity((prev) => ++prev);
@@ -27,7 +27,7 @@ const ProductItem = ({ product }) => {
 
   const addBasket = (product) => {
     if (basket.some((item) => item.productId == product.id)) {
-      message.warning(`${product.name} zaten sepete eklendi.`);
+      message.warning(`${product.name} đã được thêm vào giỏ rồi!`);
       return;
     }
     const newItem = {
@@ -37,7 +37,7 @@ const ProductItem = ({ product }) => {
     };
     let newBasket = [...basket, newItem];
     updateBasket(newBasket);
-    message.success(`${product.name} sepete başarıyla eklendi`);
+    message.success(`${product.name} được thêm vào giỏ thành công`);
   };
 
   return (
@@ -48,8 +48,8 @@ const ProductItem = ({ product }) => {
     >
       <Meta title={product.name} description={product.description} />
       <br />
-      <Text type="secondary">{product.price} TRY</Text> <br />
-      <Text type="secondary">{product.availableStock} adet mevcut var. </Text>
+      <Text type="secondary">{product.price} VND</Text> <br />
+      <Text type="secondary">{product.availableStock} có sẵn </Text>
       <br />
       <br />
       <PlusOutlined
@@ -69,7 +69,7 @@ const ProductItem = ({ product }) => {
         block
         onClick={() => addBasket(product)}
       >
-        Sepete Ekle
+        Thêm vào giỏ
       </Button>
     </Card>
   );
