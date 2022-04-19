@@ -9,7 +9,7 @@ pipeline {
         
         stage('Run container') {
             steps {
-                sh "docker-compose -d up"
+                sh "docker-compose up -d"
             } 
         }
     }
